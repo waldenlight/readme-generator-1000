@@ -29,11 +29,47 @@ function writeToFile(fileName, data) {
                 message: questions[0],
                 name: 'title',
             },
+            {
+                type: 'input',
+                message: questions[1],
+                name: 'description',
+            },
+            // Add table of contents
+            {
+                type: 'input',
+                message: questions[3],
+                name: 'installation',
+            },
+            {
+                type: 'input',
+                message: questions[4],
+                name: 'usage',
+            },
+            // Add credits
+            // Add license
+            // Add badges
+            // Add features
+            {
+                type: 'input',
+                message: questions[9],
+                name: 'contributing',
+            },
+            {
+                type: 'input',
+                message: questions[10],
+                name: 'tests',
+            },
+            // Add username
+            // Add email
         ])
         .then((response) =>
-            fs.writeFile('README.txt',
+            fs.writeFile('README.md',
                 `# ${response.title}\n` +
-                ``,
+                `## Description\n${response.description}\n` +
+                `## Installation\n${response.installation}\n` +
+                `## Usage\n${response.usage}\n` +
+                `## Contributing\n${response.contributing}\n` +
+                `## Tests\n${response.tests}\n`,
                 (err) => err ? console.error(err) : console.log('Noted'))
         );
 }
