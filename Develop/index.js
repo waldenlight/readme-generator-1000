@@ -160,7 +160,9 @@ function writeToFile(fileName, data) {
                 `## Features\n${response.features}\n` +
                 `## Contributing\n${response.contributing}\n` +
                 `## Tests\n${response.tests}\n` +
-                `## Questions\n${response.questions}\nGitHub: [${response.username}](https://github.com/${response.username})\nEmail: ${response.email}`,
+                `## Questions\n${response.questions}\n` +
+                `\nGitHub: [${response.username}](https://github.com/${response.username})\n` +
+                `\nEmail: ${response.email}`,
                 (err) => err ? console.error(err) : console.log('Noted'))
         );
 }
