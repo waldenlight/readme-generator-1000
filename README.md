@@ -1,62 +1,44 @@
 # readme-generator-1000
-
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-
 Create a neatly formatted README.md file for your GitHub repo by answering questions in the command line. The motivation was to hone my node.js skills whilst creating an alternative for the boring task of README.md formatting.
 
-## Table of Contents (Optional)
+BTW: This README was created with this app!
+## Table of Contents
+[Installation](#installation)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+[Usage](#usage)
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+[Credits](#credits)
 
+[License](#license)
+
+[Badges](#badges)
+
+[Features](#features)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)
 ## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
+To install app, clone the repo or download the files, and run node ./index.js in the terminal. You should be in the develop directory of the project with node installed when running the command.
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
+Run node ./index.js in the terminal. You should be in the develop direcotry of the project with node installed when running the command. You will then receive prompts. Your answers for these prompts will create a new README.md file in the develop directory. You can then take this file and put it in your GitHub project.
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
+I worked on the project solo.
 ## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
+MIT
 ## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
+No relevant badges.
 ## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
+Simple, intuitive prompts. Generation of a well-formatted README.md file.
+## Contributing
+To contribute to this app, contact me (see below).
 ## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Try testing the app with many different kinds of answers. Real long ones that take many lines, real short ones, ones with markup syntax in them, etc.
+## Questions
+For questions, contact me below.
+GitHub: [waldenlight](https://github.com/waldenlight)
+Email: waldenlight@gmail.com
