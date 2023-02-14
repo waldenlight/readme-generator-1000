@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { Console } = require('console');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -164,10 +165,13 @@ function writeToFile(fileName, data) {
         );
 }
 
-writeToFile();
-
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    fs.unlink("./readme.md", err => {
+        console.log("Cannot delete file.", err);
+    })
+}
 
 // Function call to initialize app
 init();
+writeToFile();
