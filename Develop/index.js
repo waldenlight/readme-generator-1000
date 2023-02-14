@@ -16,6 +16,7 @@ const questions = [
     "Explain how to contribute.",
     "Provide any relevant tests that can be performed.",
     // Additional
+    "Give instructions as to how other developers can ask you questions about the project.",
     "What is your GitHub username?",
     "What is your email?"
 ];
@@ -100,12 +101,23 @@ function writeToFile(fileName, data) {
                 message: questions[10],
                 name: 'tests',
             },
-            // Add username
-            // Add email
+            {
+                type: 'input',
+                message: questions[11],
+                name: 'questions',
+            },
+            {
+                type: 'input',
+                message: questions[12],
+                name: 'username',
+            },
+            {
+                type: 'input',
+                message: questions[13],
+                name: 'email',
+            }
         ])
         .then((response) =>
-            // Determine License badge
-            // Append to file
             fs.writeFile('README.md',
                 `# ${response.title}\n` +
                 `${badgeList[response.license]}\n` +
@@ -114,7 +126,8 @@ function writeToFile(fileName, data) {
                 `## Usage\n${response.usage}\n` +
                 `## License\n${response.license.name}\n` +
                 `## Contributing\n${response.contributing}\n` +
-                `## Tests\n${response.tests}\n`,
+                `## Tests\n${response.tests}\n` +
+                `## Questions\n${response.questions}\nGitHub: [${response.username}](https://github.com/${response.username})\nEmail: ${response.email}`,
                 (err) => err ? console.error(err) : console.log('Noted'))
         );
 }
