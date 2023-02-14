@@ -6,7 +6,6 @@ const fs = require('fs');
 const questions = [
     "What is the title of your project?",
     "Give a description of the project.",
-    "Choose relevant sections for your table of contents.",
     "Provide steps for installation.",
     "Provide steps for usage.",
     "Provide credits.",
@@ -57,22 +56,22 @@ function writeToFile(fileName, data) {
             // Add table of contents
             {
                 type: 'input',
-                message: questions[3],
+                message: questions[2],
                 name: 'installation',
             },
             {
                 type: 'input',
-                message: questions[4],
+                message: questions[3],
                 name: 'usage',
             },
             {
                 type: 'input',
-                message: questions[5],
+                message: questions[4],
                 name: 'credits',
             },
             {
                 type: 'list',
-                message: questions[6],
+                message: questions[5],
                 name: 'license',
                 choices: [
                     {
@@ -103,37 +102,37 @@ function writeToFile(fileName, data) {
             },
             {
                 type: 'input',
-                message: questions[7],
+                message: questions[6],
                 name: 'badges',
             },
             {
                 type: 'input',
-                message: questions[8],
+                message: questions[7],
                 name: 'features',
             },
             {
                 type: 'input',
-                message: questions[9],
+                message: questions[8],
                 name: 'contributing',
             },
             {
                 type: 'input',
-                message: questions[10],
+                message: questions[9],
                 name: 'tests',
             },
             {
                 type: 'input',
-                message: questions[11],
+                message: questions[10],
                 name: 'questions',
             },
             {
                 type: 'input',
-                message: questions[12],
+                message: questions[11],
                 name: 'username',
             },
             {
                 type: 'input',
-                message: questions[13],
+                message: questions[12],
                 name: 'email',
             }
         ])
@@ -142,6 +141,16 @@ function writeToFile(fileName, data) {
                 `# ${response.title}\n` +
                 `${badgeList[response.license]}\n` +
                 `## Description\n${response.description}\n` +
+                `## Table of Contents` +
+                `\n[Installation](#installation)\n` +
+                `\n[Usage](#usage)\n` +
+                `\n[Credits](#credits)\n` +
+                `\n[License](#license)\n` +
+                `\n[Badges](#badges)\n` +
+                `\n[Features](#features)\n` +
+                `\n[Contributing](#contributing)\n` +
+                `\n[Tests](#tests)\n` +
+                `\n[Questions](#questions)\n` +
                 `## Installation\n${response.installation}\n` +
                 `## Usage\n${response.usage}\n` +
                 `## Credits\n${response.credits}\n` +
