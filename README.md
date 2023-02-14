@@ -26,6 +26,7 @@ BTW: This README was created with this app!
 To install app, clone the repo or download the files, and run node ./index.js in the terminal. You should be in the develop directory of the project with node installed when running the command.
 ## Usage
 Run node ./index.js in the terminal. You should be in the develop direcotry of the project with node installed when running the command. You will then receive prompts. Your answers for these prompts will create a new README.md file in the develop directory. You can then take this file and put it in your GitHub project.
+[Video on usage](https://drive.google.com/file/d/14_20QgLWOjB4zeeHe2qNzIXazqbsgYXP/view)
 ## Credits
 I worked on the project solo.
 ## License
@@ -40,5 +41,7 @@ To contribute to this app, contact me (see below).
 Try testing the app with many different kinds of answers. Real long ones that take many lines, real short ones, ones with markup syntax in them, etc.
 ## Questions
 For questions, contact me below.
+
 GitHub: [waldenlight](https://github.com/waldenlight)
+
 Email: waldenlight@gmail.com
