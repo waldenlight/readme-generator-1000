@@ -22,12 +22,21 @@ const questions = [
 ];
 
 const badgeList = [
-    "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-    "[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)",
-    "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-    "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT",
-    "[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)",
-    "[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)",
+    "![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)",
+    "![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)",
+    "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)",
+    "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)",
+    "![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)",
+    "![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)",
+]
+
+const licenseList = [
+    "Apache 2.0",
+    "CC0-1.0",
+    "GPL v3",
+    "MIT",
+    "Open Font-1.1",
+    "Zlib",
 ]
 
 // TODO: Create a function to write README file
@@ -56,8 +65,11 @@ function writeToFile(fileName, data) {
                 message: questions[4],
                 name: 'usage',
             },
-            // Add credits
-            // Add license
+            {
+                type: 'input',
+                message: questions[5],
+                name: 'credits',
+            },
             {
                 type: 'list',
                 message: questions[6],
@@ -89,8 +101,16 @@ function writeToFile(fileName, data) {
                     },
                 ],
             },
-            // Add badges
-            // Add features
+            {
+                type: 'input',
+                message: questions[7],
+                name: 'badges',
+            },
+            {
+                type: 'input',
+                message: questions[8],
+                name: 'features',
+            },
             {
                 type: 'input',
                 message: questions[9],
@@ -124,7 +144,10 @@ function writeToFile(fileName, data) {
                 `## Description\n${response.description}\n` +
                 `## Installation\n${response.installation}\n` +
                 `## Usage\n${response.usage}\n` +
-                `## License\n${response.license.name}\n` +
+                `## Credits\n${response.credits}\n` +
+                `## License\n${licenseList[response.license]}\n` +
+                `## Badges\n${response.badges}\n` +
+                `## Features\n${response.features}\n` +
                 `## Contributing\n${response.contributing}\n` +
                 `## Tests\n${response.tests}\n` +
                 `## Questions\n${response.questions}\nGitHub: [${response.username}](https://github.com/${response.username})\nEmail: ${response.email}`,
