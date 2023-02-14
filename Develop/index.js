@@ -167,9 +167,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    fs.unlink("./readme.md", err => {
-        console.log("Cannot delete file.", err);
-    })
+    fs.unlink("./readme.md", err => { })
 }
 
 // Function call to initialize app
